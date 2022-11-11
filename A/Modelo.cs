@@ -51,9 +51,23 @@ namespace Modelo
 
         public void agregarFAmilia(Familia pFlia)
         {
-            MessageBox.Show(pFlia.nombre);
+           
+            string textoRecibido = pFlia.nombre + "" + pFlia.apellido + "" + pFlia.ocupacion + "" + pFlia.parentesco;
+
+            //MessageBox.Show(textoRecibido);//
+
+            MySqlConnection cnx = new MySqlConnection("server=10.120.2.123;userid=alumn517;password=Alumno2022;database=repo_517");
+            MySqlCommand instruccion = new MySqlCommand();
+            instruccion.Connection = cnx;
+            cnx.Open();
+            instruccion.CommandText =
+            // "delete from familia where idfamilia = '" + pId + "'";//
+            "insert into familia (nombre, apellido, parentesco, ocupacion) values('" + pFlia.nombre + "','" + pFlia.apellido + "','" + pFlia.parentesco + "','" + pFlia.nombre + "')";
+
+           
+            instruccion.ExecuteNonQuery();
+            cnx.Close();
             
-             
         }
     }
 

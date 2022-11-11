@@ -14,6 +14,8 @@ namespace A
 {
     public partial class AltaFamilia : Form
     {
+
+
         Familia flia = new Familia();
         public AltaFamilia()
         {
@@ -34,6 +36,8 @@ namespace A
             flia.ocupacion = txtOcupacion.ToString();
 
             flia.agregarFAmilia(flia);
+
+            this.Close();
         }
 
         private void btCerrar_Click(object sender, EventArgs e)

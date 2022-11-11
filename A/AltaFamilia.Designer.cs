@@ -29,7 +29,7 @@ namespace A
         /// </summary>
         private void InitializeComponent()
         {
-            this.btAceptar = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
             this.btCerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,15 +41,15 @@ namespace A
             this.txtOcupacion = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // btAceptar
+            // btnAceptar
             // 
-            this.btAceptar.Location = new System.Drawing.Point(364, 400);
-            this.btAceptar.Name = "btAceptar";
-            this.btAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btAceptar.TabIndex = 0;
-            this.btAceptar.Text = "Aceptar";
-            this.btAceptar.UseVisualStyleBackColor = true;
-            this.btAceptar.Click += new System.EventHandler(this.button1_Click);
+            this.btnAceptar.Location = new System.Drawing.Point(364, 400);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.TabIndex = 0;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.button1_Click);
             // 
             // btCerrar
             // 
@@ -139,7 +139,7 @@ namespace A
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btCerrar);
-            this.Controls.Add(this.btAceptar);
+            this.Controls.Add(this.btnAceptar);
             this.Name = "AltaFamilia";
             this.Text = "AltaDeFamilia";
             this.Load += new System.EventHandler(this.AltaFamilia_Load);
@@ -150,7 +150,7 @@ namespace A
 
         #endregion
 
-        private System.Windows.Forms.Button btAceptar;
+        private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btCerrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

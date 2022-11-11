@@ -162,7 +162,6 @@ C:\Users\ET12Compu\Desktop\New-proyect\A\bin\Debug\System.Memory.xml
 C:\Users\ET12Compu\Desktop\New-proyect\A\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\ET12Compu\Desktop\New-proyect\A\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\ET12Compu\Desktop\New-proyect\A\obj\Debug\A.csproj.AssemblyReference.cache
-C:\Users\ET12Compu\Desktop\New-proyect\A\obj\Debug\A.csproj.SuggestedBindingRedirects.cache
 C:\Users\ET12Compu\Desktop\New-proyect\A\obj\Debug\A.Form1.resources
 C:\Users\ET12Compu\Desktop\New-proyect\A\obj\Debug\A.AltaFamilia.resources
 C:\Users\ET12Compu\Desktop\New-proyect\A\obj\Debug\A.Properties.Resources.resources
