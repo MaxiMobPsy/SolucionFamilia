@@ -29,7 +29,7 @@ namespace A
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            dgvFamilia.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             
             dgvFamilia.DataSource = familia1.llenarFamilia();
         }
@@ -41,14 +41,24 @@ namespace A
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            AltaFamilia altaFamilia = new AltaFamilia();
+            AltaFamilia altaFamilia = new AltaFamilia("A");
+            altaFamilia.Text = "Alta Familia";
             altaFamilia.ShowDialog();
+
 
             dgvFamilia.DataSource = familia1.llenarFamilia();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            AltaFamilia modificarFamilia = new AltaFamilia("M");
+            modificarFamilia.Text = "Modificar Familia";
+
+            
+
+            modificarFamilia.ShowDialog();
+
+
 
         }
 

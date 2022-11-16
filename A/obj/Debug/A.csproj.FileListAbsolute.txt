@@ -170,3 +170,4 @@ C:\Users\ET12Compu\Desktop\New-proyect\A\obj\Debug\A.csproj.CoreCompileInputs.ca
 C:\Users\ET12Compu\Desktop\New-proyect\A\obj\Debug\A.csproj.CopyComplete
 C:\Users\ET12Compu\Desktop\New-proyect\A\obj\Debug\A.exe
 C:\Users\ET12Compu\Desktop\New-proyect\A\obj\Debug\A.pdb
+C:\Users\ET12Compu\Desktop\New-proyect\A\obj\Debug\A.csproj.SuggestedBindingRedirects.cache

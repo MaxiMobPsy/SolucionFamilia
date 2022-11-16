@@ -17,23 +17,30 @@ namespace A
 
 
         Familia flia = new Familia();
-        public AltaFamilia()
+        string nombre = "";
+        public AltaFamilia(string pOrigen)
         {
+            if (pOrigen == "M")
+            {
+                nombre = "Probando si funka";
+            }
+          
+
             InitializeComponent();
         }
 
         private void AltaFamilia_Load(object sender, EventArgs e)
         {
-
+            txtNombre.Text = nombre;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
            
-            flia.nombre = txtNombre.ToString();
-            flia.apellido = txtApellido.ToString();
-            flia.parentesco = txtParentesco.ToString();
-            flia.ocupacion = txtOcupacion.ToString();
+            flia.nombre = txtNombre.Text;
+            flia.apellido = txtApellido.Text;
+            flia.parentesco = txtParentesco.Text;
+            flia.ocupacion = txtOcupacion.Text;
 
             flia.agregarFAmilia(flia);
 

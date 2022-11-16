@@ -51,7 +51,7 @@ namespace Modelo
 
         public void agregarFAmilia(Familia pFlia)
         {
-           
+
             string textoRecibido = pFlia.nombre + "" + pFlia.apellido + "" + pFlia.ocupacion + "" + pFlia.parentesco;
 
             //MessageBox.Show(textoRecibido);//
@@ -62,13 +62,16 @@ namespace Modelo
             cnx.Open();
             instruccion.CommandText =
             // "delete from familia where idfamilia = '" + pId + "'";//
-            "insert into familia (nombre, apellido, parentesco, ocupacion) values('" + pFlia.nombre + "','" + pFlia.apellido + "','" + pFlia.parentesco + "','" + pFlia.nombre + "')";
+            "insert into familia (nombre, apellido, parentesco, ocupacion) values('" + pFlia.nombre + "','" + pFlia.apellido + "','" + pFlia.parentesco + "','" + pFlia.ocupacion + "')";
 
-           
+
             instruccion.ExecuteNonQuery();
             cnx.Close();
-            
+
+
         }
+
+        
     }
 
 }
