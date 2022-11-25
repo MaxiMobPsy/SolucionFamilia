@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Modelo
 {
@@ -67,11 +68,43 @@ namespace Modelo
 
             instruccion.ExecuteNonQuery();
             cnx.Close();
-
-
         }
+        public Familia obtenerFamilia(string pIdFamilia)
+        {
+            MySqlConnection conexion = new MySqlConnection("server=10.120.2.123;userid=alumn517;password=Alumno2022;database=repo_517");
+            MySqlCommand instruccion = new MySqlCommand();
+            instruccion.Connection = conexion;
 
-        
+            conexion.Open();
+            MySqlDataAdapter Adapter = new MySqlDataAdapter();
+            instruccion.CommandText = "select * from familia where idfamilia = '" + pIdFamilia + "'";
+            Adapter.SelectCommand = instruccion;
+            DataSet SetDatos = new DataSet();
+            Adapter.Fill(SetDatos);
+            DataTable Tabla = new DataTable();
+            Tabla = SetDatos.Tables[0];
+            conexion.Close();
+
+            this.nombre = Tabla.Rows[0][1].ToString();
+            this.apellido = Tabla.Rows[0][2].ToString();
+            this.ocupacion = Tabla.Rows[0][4].ToString();
+            this.parentesco = Tabla.Rows[0][3].ToString();
+
+            return this;
+            
+        }
+        public void actualizarFamilia(Familia pflia, string pIdFamilia)
+        {
+            MySqlConnection cnx = new MySqlConnection("server=10.120.2.123;userid=alumn517;password=Alumno2022;database=repo_517");
+            MySqlCommand instruccion = new MySqlCommand();
+            instruccion.Connection = cnx;
+            cnx.Open();
+
+            instruccion.CommandText = "update familia set nombre = '"+ pflia.nombre +"', apellido = '"+ pflia.apellido +"', parentesco = '"+pflia.parentesco +"', ocupacion = '"+ pflia.ocupacion +"' where idfamilia = '"+ pIdFamilia +"'";
+
+            instruccion.ExecuteNonQuery();
+            cnx.Close();
+        }
     }
 
 }

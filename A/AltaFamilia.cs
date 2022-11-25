@@ -17,12 +17,15 @@ namespace A
 
 
         Familia flia = new Familia();
-        string nombre = "";
-        public AltaFamilia(string pOrigen)
+        
+        string origen = "";
+        public AltaFamilia(string pOrigen, string pIdFamilia)
         {
             if (pOrigen == "M")
             {
-                nombre = "Probando si funka";
+                origen = pIdFamilia;
+                flia.obtenerFamilia(pIdFamilia);
+
             }
           
 
@@ -31,19 +34,29 @@ namespace A
 
         private void AltaFamilia_Load(object sender, EventArgs e)
         {
-            txtNombre.Text = nombre;
+            txtNombre.Text = flia.nombre;
+            txtApellido.Text = flia.apellido;
+            txtParentesco.Text = flia.parentesco;
+            txtOcupacion.Text = flia.ocupacion;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+
             flia.nombre = txtNombre.Text;
             flia.apellido = txtApellido.Text;
             flia.parentesco = txtParentesco.Text;
             flia.ocupacion = txtOcupacion.Text;
 
-            flia.agregarFAmilia(flia);
+            if (origen == "")
+            {
+                flia.agregarFAmilia(flia);
+            }
+            else
+            {
+                flia.actualizarFamilia(flia, origen);
 
+            }
             this.Close();
         }
 

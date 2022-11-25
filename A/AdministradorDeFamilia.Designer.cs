@@ -29,7 +29,6 @@ namespace A
         /// </summary>
         private void InitializeComponent()
         {
-            this.btCompletar = new System.Windows.Forms.Button();
             this.dgvFamilia = new System.Windows.Forms.DataGridView();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -38,16 +37,6 @@ namespace A
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFamilia)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btCompletar
-            // 
-            this.btCompletar.Location = new System.Drawing.Point(664, 381);
-            this.btCompletar.Name = "btCompletar";
-            this.btCompletar.Size = new System.Drawing.Size(75, 23);
-            this.btCompletar.TabIndex = 0;
-            this.btCompletar.Text = "Completar";
-            this.btCompletar.UseVisualStyleBackColor = true;
-            this.btCompletar.Click += new System.EventHandler(this.btCompletar_Click);
             // 
             // dgvFamilia
             // 
@@ -118,7 +107,6 @@ namespace A
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.dgvFamilia);
-            this.Controls.Add(this.btCompletar);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -129,8 +117,6 @@ namespace A
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btCompletar;
         private System.Windows.Forms.DataGridView dgvFamilia;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnAgregar;
